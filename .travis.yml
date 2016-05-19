@@ -4,6 +4,8 @@ python:
   - "2.7"
 # command to install dependencies
 install:
-  - cd getid_tool;pip install .
+  - cd getid_tool
+  - python setup.py bdist
+  - pip install .
 # command to run tests
-script: getid_tool/getid_tool/getid
+script: getid
