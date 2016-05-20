@@ -1,11 +1,15 @@
 language: python
 python:
-  - "2.6"
-  - "2.7"
-# command to install dependencies
+- '2.6'
+- '2.7'
 install:
-  - cd getid_tool
-  - python setup.py bdist
-  - pip install .
-# command to run tests
+- cd getid_tool
+- python setup.py bdist
+- pip install .
 script: getid
+deploy:
+  provider: pypi
+  user: sls.jarvis
+  server: https://testpypi.python.org/pypi
+  password:
+    secure: iLY5H9lyYQJUhIK91c3RbdOW57QzrxO4DixjzrfRI24H3i2su+dTZeCUCFdWLgkF5PBUC3PWfWekEDJnxkK8BujmrjqQOexGZc5WGS3bd9OVrPgQr5f8JJbR8X/wUNpAmE5FZca8vxWD1qYz0IjySUUZBUIf757io2n7KRQc+0njlzBOWCDPOoLotyTB04t49/jNfaurKsuQHKhcJQ+anU5+CLKqv0bKfUlH/AQEPRoku0R2ZHS0Vowzis95IHuMKjRg04J0NJi/GOWyV/zh0mRlLkTCsWYbHSiYfZe7J0vXKN5ATihnX0glETZ1A8a4hlSSTQGHFrXqpUSmZacllEMZ8OoI0meP7ZtNjrg+EF6owLvjbDxrsPrdaWr/gRa6dcJx3hnXb56oqUU5atssnGC/FIIQ0wuWu9PUORnxzLROgSovoPA/IyXbHlWaHklcQ74j0roas1725Mobal/oafqR9k4a3IV3BsWm5VHHid4vj0bM0JEhJfSOFXbMj0yHFpaTLKxMSagW+TSiPr2Sg1QEmTWeGEnGfXYndPXQCgKoq849jTw7uGBV71aLObadhjybHRn+HYOfLN5OSIh+Ik63gtFBeHSjP6Et1lO/C59D8PsttyCDsBoOjleydvS7/kZPlXz757WCBT34rolmHEx5eSdMzC1z8sCVwH0/bMM=
