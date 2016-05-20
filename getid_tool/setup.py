@@ -5,7 +5,7 @@ setup(
     name = 'getid_tools',
     packages = ['getid_tool'],
     scripts = ['getid_tool/getid'],
-    version = '1.3c3',
+    version = '1.4',
     description = 'SLS Get ID Tool',
     author = 'sls.jarvis, SLS-BrianKe',
     author_email = 'pkg-admin@silverlining-systems.com',
